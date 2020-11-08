@@ -8,4 +8,4 @@ This was made utilizing HTML, CSS, and Javascript.
 
 ## Screenshots
 
-![Screenshot](images/screenshot.jpg "Screenshot")
+![Screenshot](images/screenshot.png "Screenshot")
