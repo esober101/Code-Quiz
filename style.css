@@ -1,0 +1,60 @@
+
+
+body,html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-image: url(Images/code.jpg);
+    height: 100%;
+}
+.game-box{
+    background: whitesmoke;
+    border-radius: 20px;
+    width: auto;
+    height: 450px;
+    margin-top: 20%;
+}
+.game-timer{
+    color: #4a6ac0;
+}
+.btn-primary{
+    border: black;
+    width: 200px;
+    border-radius:20px;
+    padding: 10px;
+	background:#4a6ac0;
+    color: white;
+    margin: 1% auto;
+    display: block;
+}
+
+#info{
+    padding-right: 15%;
+    padding-left: 15%;
+}
+#code-title{
+    text-align: center;
+    font-weight: bold;
+}
+#alert {
+    color: #4a6ac0;
+}
+.input-group{
+    border: black;
+    width: 200px;
+    border-radius:20px;
+    padding: 10px;
+	background:#4a6ac0;
+    color: white;
+    margin: 1% auto;
+    display: block;
+}
+#scoresPage{
+    text-align: center;
+}
+#highScoresList{
+    width: 200px;
+    border-radius:20px;
+    padding: 20px;
+    margin: 1% auto;
+    display: block;
+}
