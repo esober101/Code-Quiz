@@ -6,7 +6,7 @@ This was made utilizing HTML, CSS, and Javascript.
 
 ## URLs
 
-https://esober101.github.io/Code-Quiz/
+https://esober101.github.io/code-quiz/
 
 ## Screenshots
 
