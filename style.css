@@ -1,9 +1,7 @@
-
-
 body,html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    background-image: url('https://github.com/esober101/code-quiz/blob/main/images/code.jpg');
+    background-image: url(images/code.jpg);
     height: 100%;
 }
 .game-box{
