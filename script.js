@@ -29,7 +29,6 @@
 
 // Variables declared
 var current = 0;
-var score = 0;
 var count = 75;
 var allScores = [];
 var userScores = JSON.parse(localStorage.getItem("userScores"));
@@ -43,15 +42,14 @@ var userAnswers = document.getElementById("question-answers");
 var myScore = document.getElementById("score");
 var btnScore = document.getElementById("btnScore");
 var info = document.getElementById("info");
-var timeinterval = document.getElementById("timeinterval")
+var addscore = document.getElementById("addscore");
 
 
 // Quiz start
 btnStart.addEventListener("click", beginQuiz);
     function beginQuiz(){
         if(userScores !==null) { 
-            allScores = userScores;
-            }
+            allScores = userScores;}
             info.classList.add("d-none");
             btnStart.classList.add("d-none");
             timecounter.classList.remove("d-none");
@@ -59,8 +57,7 @@ btnStart.addEventListener("click", beginQuiz);
             nextQuestions= questions[current];
             console.log(nextQuestions.title);
             currentQuestion(nextQuestions);
-            startgame();
-            }
+            setTime();}
             btnScore.addEventListener("click" , function(){
             let name = document.getElementById("inputScore").value;
             scoreBoard(name, count);
@@ -98,23 +95,20 @@ function displaynextQuestion(e){
     }
 
 // Time set
-function startgame(){
-    timeinterval = setInterval(function(){
-    timer.innerText = count
+function setTime() {
+    let timeInterval = setInterval(function() {
     count--;
+    timer.innerText = count;
+    if(count === 0) {
+    clearInterval(timeInterval);
+    sendMessage();
+    }
     }, 1000);
+  }
+function sendMessage() {
+    timer.innerText = "Time's Up!";
 }
 
-// Score board
-function scoreBoard(a, b) {
-    var userData = {
-    inits: a,
-    userScore: b
-    };
-    allScores.push(userData);
-    localStorage.setItem("userScores", JSON.stringify(allScores));
-    location.href = "score.html";
-}
 
 // Response to answers
 function correction(response){
@@ -129,20 +123,19 @@ function correction(response){
     }
 }
 
-// Stop timer
-function stopTimer() {
-    if (timeinterval === 0);
-    setTime();
-    renderTime();
-    alert.innerText= "Times up!"
-  }
+// Score board
+function scoreBoard(a, b) {
+    var userData = { inits: a, userScore: b };
+    allScores.push(userData);
+    localStorage.setItem("userScores", JSON.stringify(allScores));
+    location.href = "score.html";
+}
 
 // End of game
  function endgame (){
-    btnStart.classList.add("d-none")
+    btnStart.classList.add("d-none");
     myScore.innerText = count;
     addscore.classList.remove("d-none");
     timecounter.classList.add("d-none");
     quizQuestions.classList.add("d-none");
-    addscore.classList.remove("d-none");
  }
