@@ -107,19 +107,20 @@ function setTime() {
   }
 function sendMessage() {
     timer.innerText = "Time's Up!";
+    endgame();
 }
 
 
 // Response to answers
 function correction(response){
     if(response){
-        alert.innerText= "Correct"
-        console.log("Correct")
+        alert.innerText= "Correct";
+        console.log("Correct");
     }else {
-        alert.innerText="Incorrect"
-        count = count -15
-        timer.innerHTML = count
-        console.log("Incorrect")
+        alert.innerText="Incorrect";
+        count = count -15;
+        timer.innerHTML = count;
+        console.log("Incorrect");
     }
 }
 
